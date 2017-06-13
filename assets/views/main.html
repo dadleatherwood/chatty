@@ -9,8 +9,13 @@
 		<input ng-model="newMessage" type="text" placeholder="Hello!">
 	</form>
 
+  <!--myCode-->
+  <form ng-submit="addUsername(newUsername)">
+    <input ng-model="newUsername" type="text" placeholder="New Username" />
+  </form>
+
   <div ng-repeat="message in messages track by $index">
-  {{message.message}} : {{message.time | date: 'shortTime'}}
+  {{message.message}} : {{message.time | date: 'shortTime'}} {{message.username}}
 </div>
 
 </div>
